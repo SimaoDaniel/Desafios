@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+    line-height: 1.6;
+
+}
+.cabecalho{
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(89, 89, 214, 0.897);
+    padding: 30px;
+}
+.cabecalho li{
+    list-style-type:none;
+    
+}
+.cabecalho a{
+    padding: 15px;
+    background-color: aqua;
+    border-radius: 20px;
+    text-decoration: none;
+    
+    
+    
+}
+.cabecalho a:hover{
+    background-color: blue;
+    color: #ffffff;
+    transition: 0.3s;
+}
+a:hover{
+    transform: scale(1.05);
+}

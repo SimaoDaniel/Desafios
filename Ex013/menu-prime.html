@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flarex | Menu Responsivo</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #0f172a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+        header {
+            background-color: var(--dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            color: white;
+            position: relative;
+        }
+
+        /* TEMA 5: Esconder o Checkbox (A "lógica" do menu) */
+        #menu-control { display: none; }
+
+        /* Ícone Hambúrguer (Apenas visível no telemóvel) */
+        .menu-icon {
+            display: none; /* Escondido por padrão no PC */
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+        /* LISTA DE LINKS */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        /* 📱 MEDIA QUERY: Estilo para Telemóvel */
+        @media screen and (max-width: 768px) {
+            .menu-icon { display: block; } /* Mostra o ícone ☰ */
+
+            .nav-links {
+                display: none; /* Esconde os links por padrão no telemóvel */
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark);
+                padding: 20px;
+                text-align: center;
+                border-top: 1px solid #333;
+            }
+
+            /* A MÁGICA: Se o checkbox estiver marcado, mostra o menu */
+            #menu-control:checked ~ .nav-links {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><strong>Flarex</strong>Tec</div>
+
+        <input type="checkbox" id="menu-control">
+
+        <label for="menu-control" class="menu-icon">&#9776;</label>
+
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Comunidade</a></li>
+            <li><a href="#" style="background:var(--primary); padding: 8px 15px; border-radius: 5px;">Login</a></li>
+        </ul>
+    </header>
+
+    <main style="padding: 50px; text-align: center;">
+        <h2>Redimensiona a janela!</h2>
+        <p>No telemóvel, os links desaparecem e o ícone ☰ aparece.</p>
+    </main>
+
+</body>
+</html>

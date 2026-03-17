@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flarex Tec | Prime Links</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* VARIÁVEIS CSS (Boas práticas do Módulo 2) */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --primary-color: #3b82f6; /* Azul Prime */
+            --accent-color: #6366f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            /* TEMA 3: Flexbox para centralizar tudo na tela */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* CONTAINER PRINCIPAL */
+        .container {
+            /* TEMA 1: Unidades Relativas (90% no móvel, máx 400px no PC) */
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* MÓDULO 1: Imagem arredondada */
+            border: 3px solid var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .bio {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        /* TEMA 3: Lista de Links com Flexbox */
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px; /* Espaçamento moderno entre botões */
+        }
+
+        .link-item {
+            background-color: var(--card-bg);
+            color: white;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            /* MÓDULO 2: Transição suave */
+            transition: all 0.3s ease;
+        }
+
+        /* MÓDULO 2: Efeito de Hover */
+        .link-item:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.05); /* Aumenta um pouco ao passar o rato */
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.5);
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 40px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://via.placeholder.com/100" alt="Simão - Flarex" class="profile-img">
+        
+        <h1>Simão | Flarex Tec</h1>
+        <p class="bio">Prime Developer & Aspirante a Full Stack. Construindo o futuro digital de Angola. 🇦🇴</p>
+
+        <nav class="links-list">
+            <a href="#" class="link-item">🚀 Meu Portfólio</a>
+            <a href="#" class="link-item">💻 Curso em Vídeo (Guanabara)</a>
+            <a href="#" class="link-item">📱 Instagram Flarex</a>
+            <a href="#" class="link-item">👥 Comunidade Prime Developers</a>
+        </nav>
+    </div>
+
+    <footer>
+        Desenvolvido por Flarex Tec &copy; 2026
+    </footer>
+
+</body>
+</html>

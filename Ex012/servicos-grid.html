@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flarex | Grelha Dinâmica</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #f3f4f6;
+            --card: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+        body {
+            background-color: var(--bg);
+            padding: 40px 20px;
+        }
+
+        h2 { text-align: center; margin-bottom: 30px; color: #1f2937; }
+
+        /* TEMA 4: O Container Flexbox Inteligente */
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens pulem para a linha de baixo */
+            gap: 20px;       /* Espaçamento uniforme sem margens manuais */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* TEMA 4: Flex-grow e Flex-basis */
+        .card {
+            background-color: var(--card);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            
+            /* EXPLICAÇÃO:
+               flex-grow: 1 (O card cresce para preencher o espaço vazio)
+               flex-shrink: 1 (O card pode encolher se necessário)
+               flex-basis: 300px (O tamanho ideal de cada card é 300px)
+            */
+            flex: 1 1 300px; 
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+        }
+
+        .card h3 { color: var(--primary); margin-bottom: 10px; }
+        
+        .card p { color: #4b5563; font-size: 0.95rem; margin-bottom: 15px; }
+
+        .btn-saiba-mais {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Nossas Especialidades Prime</h2>
+
+    <div class="grid-container">
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>Interfaces modernas e intuitivas focadas na experiência do utilizador final.</p>
+            <a href="#" class="btn-saiba-mais">Ler mais &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3>Apps Mobile</h3>
+            <p>Desenvolvimento nativo e híbrido para iOS e Android com alta performance.</p>
+            <a href="#" class="btn-saiba-mais">Ler mais &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3>SEO & Tráfego</h3>
+            <p>Colocamos a sua empresa no topo das pesquisas do Google em Angola.</p>
+            <a href="#" class="btn-saiba-mais">Ler mais &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3>Cibersegurança</h3>
+            <p>Proteção de dados e auditoria de sistemas para evitar ataques e perdas.</p>
+            <a href="#" class="btn-saiba-mais">Ler mais &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3>Cloud Computing</h3>
+            <p>Migração e gestão de servidores na nuvem com 99% de disponibilidade.</p>
+            <a href="#" class="btn-saiba-mais">Ler mais &rarr;</a>
+        </div>
+    </div>
+
+</body>
+</html>
